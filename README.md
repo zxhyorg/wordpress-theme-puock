@@ -4,6 +4,11 @@
 <img alt="logo" height="120" src="./assets/img/logo/puock.png" width="120"/>
 </div>
 
+## fork介绍
+fork自 https://github.com/Licoy/wordpress-theme-puock  master版本（20260927）
+
+
+
 ## 介绍
 
 ![cover](./screenshot.png)
