@@ -343,19 +343,14 @@ function pk_post_has_cover_image($_post = null): bool
  */
 function get_post_images($_post = null): string
 {
-    global $post;
-
-    $cover_image = pk_get_post_cover_image($_post);
-    if ($cover_image !== '') {
-        return $cover_image;
+global $post;
+    if ($_post != null) {
+        $post = $_post;
     }
-
-    $post_obj = $_post ? get_post($_post) : $post;
-    if (!$post_obj) {
-        return get_random_default_image();
-    }
-
-    return get_random_default_image((int)$post_obj->ID);
+    $post_id = $post->ID;
+	  $jpg_header = $post_id%71+1;
+    $res = get_stylesheet_directory_uri() . '/assets/img/random/' . $jpg_header . '.jpg';
+    return $res;
 }
 
 /**
