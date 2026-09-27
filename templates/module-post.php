@@ -21,7 +21,7 @@ $has_display_cover_image = $display_cover_image !== '';
                                 class="fa fa-bolt-lightning"></i><?php _e('置顶', PUOCK) ?></span><?php endif; ?>
                     <?php if (!is_sticky() && is_category() && get_post_meta(get_the_ID(), 'sticky_in_category', true) === 'true'): ?><span class="badge bg-warning text-dark"><i
                                 class="fa fa-thumbtack"></i><?php _e('分类置顶', PUOCK) ?></span><?php endif; ?>
-                    <?php echo get_post_category_link('badge d-none d-md-inline-block bg-' . pk_get_color_tag(['danger', 'warning', 'dark']) . ' ahfff') ?>
+                    <!--<?php echo get_post_category_link('badge d-none d-md-inline-block bg-' . pk_get_color_tag(['danger', 'warning', 'dark']) . ' ahfff') ?>-->
                     <a class="a-link" title="<?php the_title() ?>" <?php pk_link_target() ?>
                        href="<?php the_permalink() ?>"><?php the_title() ?></a>
                 </h2>
@@ -46,7 +46,7 @@ $has_display_cover_image = $display_cover_image !== '';
                     </span>
                 </div>
                 <div>
-                    <?php echo get_post_category_link('c-sub-a t-sm ms-md-2 line-h-20 d-inline-block d-md-none') ?>
+                    <!--<?php echo get_post_category_link('c-sub-a t-sm ms-md-2 line-h-20 d-inline-block d-md-none') ?>-->
                     <span class="t-sm ms-md-2 c-sub line-h-20 d-none d-md-inline-block"><i
                                 class="fa-regular fa-clock"></i> <?php pk_get_post_date() ?></span>
                 </div>
@@ -82,7 +82,7 @@ $has_display_cover_image = $display_cover_image !== '';
             <?php endif; ?>
             <div class="post-info">
                 <h2 class="info-title">
-                    <?php echo get_post_category_link('badge d-none d-md-inline-block bg-' . pk_get_color_tag(['danger', 'warning', 'dark']) . ' ahfff') ?>
+                    <!--<?php echo get_post_category_link('badge d-none d-md-inline-block bg-' . pk_get_color_tag(['danger', 'warning', 'dark']) . ' ahfff') ?>-->
                     <a class="a-link puock-text" title="<?php the_title() ?>" <?php pk_link_target() ?>
                        href="<?php the_permalink() ?>"><?php the_title() ?></a>
                 </h2>
@@ -108,9 +108,8 @@ $has_display_cover_image = $display_cover_image !== '';
                     </span>
                     </div>
                     <div>
-                        <?php echo get_post_category_link('c-sub-a t-sm ms-md-2 line-h-20 d-inline-block d-md-none') ?>
-                        <span class="t-sm ms-md-2 c-sub line-h-20 d-none d-md-inline-block"><i
-                                    class="fa-regular fa-clock"></i> <?php pk_get_post_date() ?></span>
+                        <!--<?php echo get_post_category_link('c-sub-a t-sm ms-md-2 line-h-20 d-inline-block d-md-none') ?>-->
+                        <span class="t-sm ms-md-2 c-sub line-h-20 d-none d-md-inline-block"><i  class="fa-regular fa-clock"></i> <?php pk_get_post_date() ?></span>
                     </div>
                 </div>
             </div>
