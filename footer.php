@@ -90,6 +90,8 @@ if (window.Puock && typeof window.Puock.goUrl === 'function') {
     <div id="mobile-sidebar-overlay" class="mobile-sidebar-overlay"></div>
 </div>
 <?php endif; ?>
-
+<script type="text/javascript" id="MathJax-script" async
+   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
 </body>
 </html>
