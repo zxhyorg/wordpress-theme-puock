@@ -1,7 +1,10 @@
 <!--文章ID：<?php the_ID() ?> -->
 <?php
-$real_cover_image = pk_get_post_cover_image();
-$display_cover_image = $real_cover_image !== '' ? $real_cover_image : get_post_images();
+<?php
+//$real_cover_image = pk_get_post_cover_image();
+//$display_cover_image = $real_cover_image !== '' ? $real_cover_image : get_post_images();
+//$has_display_cover_image = $display_cover_image !== '';
+$display_cover_image = get_post_images();
 $has_display_cover_image = $display_cover_image !== '';
 ?>
 <?php if (pk_post_style_list()): ?>
