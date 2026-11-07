@@ -1,4 +1,4 @@
-name: Fetch Specific Tag from Puock Upstream 
+name: 新建上游指定分支
 # 更新到上游指定分支
 # 切换到你仓库顶部的 Actions 选项卡。
 # 点击左侧的 Fetch Specific Tag from Puock Upstream。
@@ -24,7 +24,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
           # 2. 动态添加原作者 Licoy 的仓库并抓取所有标签
-          git remote add upstream https://github.com
+          git remote add upstream https://github.com/Licoy/wordpress-theme-puock/
           git fetch upstream --tags
           
           # 3. 基于原作者的 v2.12.0 标签，创建属于你自己的专属分支
