@@ -19,16 +19,19 @@ jobs:
 
       - name: Fetch and Push Tag from Upstream
         run: |
-          # 1. 配置 Git 身份标识
+          # 1. 显式切换到本地 master 确保环境就绪
+          git checkout master
+
+          # 2. 配置 Git 身份标识
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # 2. 动态添加原作者 Licoy 的仓库并抓取所有标签
+          # 3. 动态添加原作者 Licoy 的仓库并抓取所有标签
           git remote add upstream https://github.com/Licoy/wordpress-theme-puock/
           git fetch upstream --tags
           
-          # 3. 基于原作者的 v2.12.0 标签，创建属于你自己的专属分支
-          git checkout -b branch-v2.12.0 upstream/tags/v2.12.0
+          # 4. 【核心修正点】：直接指定标签名 v2.12.0 创建属于你自己的专属分支
+          git checkout -b branch-v2.12.0 v2.12.0
           
-          # 4. 将该新分支强行推送到你自己的 Fork 仓库中
+          # 5. 将该新分支强行推送到你自己的 Fork 仓库中
           git push origin branch-v2.12.0 --force
